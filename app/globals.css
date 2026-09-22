@@ -126,6 +126,16 @@ button { cursor: pointer; }
 .booking-kind { border-radius: 999px; background: #f1f5f9; padding: 3px 6px; font-size: 9px; font-weight: 650; color: #64748b; }
 .booking-kind.required { background: #fff1f2; color: #be123c; }
 .booking-kind.auto { background: #ecfdf5; color: #047857; }
+.icon-action { display: inline-grid; height: 30px; width: 30px; flex: 0 0 auto; place-items: center; border-radius: 6px; color: #475569; }
+.icon-action:hover { background: #eff6ff; color: #1d4ed8; }
+.icon-action:disabled { cursor: not-allowed; opacity: .45; }
+.search-empty { position: absolute; top: 16px; left: 50%; z-index: 10; transform: translateX(-50%); border: 1px solid #cbd5e1; border-radius: 8px; background: white; padding: 10px 14px; color: #334155; font-size: 14px; box-shadow: 0 8px 24px rgb(15 23 42 / 10%); }
+.search-empty button { margin-left: 8px; color: #1d4ed8; text-decoration: underline; }
+.scenario-note { position: absolute; right: 14px; bottom: 14px; z-index: 5; display: flex; max-width: min(560px, calc(100% - 90px)); align-items: flex-start; gap: 8px; border: 1px solid #bfdbfe; border-radius: 8px; background: rgb(239 246 255 / 96%); padding: 9px 11px; color: #1e3a8a; font-size: 14px; line-height: 1.35; }
+.scenario-note svg { flex: 0 0 auto; margin-top: 1px; }
+.modal-backdrop { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; overflow-y: auto; background: rgb(15 23 42 / 48%); padding: 18px; }
+.modal-card { width: min(100%, 520px); overflow: hidden; border: 1px solid #cbd5e1; border-radius: 12px; background: white; box-shadow: 0 24px 80px rgb(15 23 42 / 30%); }
+input:disabled, select:disabled { cursor: not-allowed; opacity: .7; }
 
 @media (max-width: 1024px) {
   .workspace { grid-template-columns: minmax(0, 1fr) 310px; }
@@ -141,6 +151,12 @@ button { cursor: pointer; }
   .workspace { height: calc(100vh - 122px); grid-template-columns: 1fr; grid-template-rows: minmax(430px, 1fr) auto; overflow-y: auto; }
   .canvas-panel { min-height: 520px; }
   .canvas-toolbar { padding: 10px; }
+  .canvas-toolbar [role="tablist"] { max-width: 172px; }
+  .canvas-toolbar [role="tab"] { padding-right: 8px; padding-left: 8px; }
+  .canvas-toolbar > div:last-child { gap: 4px; }
+  .canvas-toolbar button { padding-right: 9px; padding-left: 9px; }
+  .canvas-toolbar button svg { height: 15px; width: 15px; }
+  .canvas-toolbar button:last-child { display: none; }
   .kpi-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .kpi { gap: 6px; padding: 10px 8px; }
   .kpi > svg, .kpi em { display: none; }
@@ -149,4 +165,6 @@ button { cursor: pointer; }
   .inspector { border-left: 0; border-top: 1px solid #dbe3ee; }
   .inspector-scroll { height: auto; }
   .bottleneck-note { bottom: 12px; left: 58px; }
+  .scenario-note { right: 8px; bottom: 8px; max-width: calc(100% - 74px); padding: 8px; font-size: 12px; }
+  .modal-backdrop { align-items: end; padding: 8px; }
 }
