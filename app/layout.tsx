@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Logi-View · Logistics Process Intelligence",
-  description: "Visualize logistics processes, bookings, capacity and bottlenecks in one operational workspace.",
+  title: "Logi-View · Logistikprozesse analysieren",
+  description: "Logistikprozesse visualisieren, Buchungsschritte verwalten und Engpässe erkennen. Kostenlos und Open Source.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
